@@ -1,0 +1,10 @@
+Feed Version: 1dfda4cb-bcef-4b24-9319-358b1a8f5216
+GTFS-to-HTML Version: 2.5.5
+Date Generated: Wed Aug 09 2023 12:57:12 GMT+0700 (Indochina Time)
+Timetable Page Count: 5
+Timetable Count: 30
+Calendar Service ID Count: 26
+Route Count: 5
+Trip Count: 3583
+Stop Count: 361
+Source: /Users/danghuy/.npm-global/lib/node_modules/gtfs-to-html/AAER.zip

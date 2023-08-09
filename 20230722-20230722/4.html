@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaHV5bmdkIiwiYSI6ImNsa2ZvaTdjbzFlc3Azbm84Z2YxbTlyZzQifQ.1IEQmug4rHTmLngKdNpW0A';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body><!-- Timetable generated on Wed Aug 09 2023 12:57:12 GMT+0700 (Indochina Time) using GTFS-to-HTML version 2.5.5 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #2C4365; color: #FFFFFF">Amsterdam Airport Express</div>
+        <div>Amsterdam Schiphol Airport</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective July 22, 2023</div>
+      <div class="timetable mb-10" id="timetable_id_29" data-day-list="Sat" data-direction-name="Amsterdam Schiphol Airport" data-timetable-id="29" data-route-id="4">
+        <h2 class="text-xl">14:00 Jul 22 - Jul 22 | saturday</h2>
+        <div class="map" id="map_timetable_id_29"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_29",
+              "routes": {
+                "0": {
+                  "route_id": "0",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "1": {
+                  "route_id": "1",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "2": {
+                  "route_id": "2",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "3": {
+                  "route_id": "3",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "4": {
+                  "route_id": "4",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.87047, 52.35332],
+                      [4.86997, 52.35316],
+                      [4.86971, 52.35301],
+                      [4.86962, 52.35298],
+                      [4.86633, 52.35219],
+                      [4.86544, 52.35196],
+                      [4.86514, 52.35194],
+                      [4.86445, 52.35176],
+                      [4.8644, 52.35175],
+                      [4.86424, 52.35165],
+                      [4.8583, 52.35006],
+                      [4.85815, 52.35005],
+                      [4.85795, 52.34999],
+                      [4.8578, 52.34997],
+                      [4.85753, 52.35],
+                      [4.85738, 52.35],
+                      [4.85721, 52.34996],
+                      [4.85712, 52.34991],
+                      [4.857, 52.3498],
+                      [4.85694, 52.3497],
+                      [4.85694, 52.34965],
+                      [4.85696, 52.34958],
+                      [4.85715, 52.34932],
+                      [4.85725, 52.34915],
+                      [4.85728, 52.34893],
+                      [4.85736, 52.34858],
+                      [4.85735, 52.3484],
+                      [4.85739, 52.34754],
+                      [4.8574, 52.34711],
+                      [4.8575, 52.34603],
+                      [4.85752, 52.34547],
+                      [4.85754, 52.34533],
+                      [4.85758, 52.34524],
+                      [4.85682, 52.34512],
+                      [4.85665, 52.34508],
+                      [4.85656, 52.34502],
+                      [4.8565, 52.34496],
+                      [4.85646, 52.34488],
+                      [4.85647, 52.34478],
+                      [4.85708, 52.3431],
+                      [4.85734, 52.34313],
+                      [4.85686, 52.34451],
+                      [4.85679, 52.34477],
+                      [4.85684, 52.34484],
+                      [4.85689, 52.34489],
+                      [4.85701, 52.34496],
+                      [4.85777, 52.34508],
+                      [4.85802, 52.34509],
+                      [4.85792, 52.3453],
+                      [4.85758, 52.34524]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.85708, 52.3431],
+                      [4.85748, 52.3421],
+                      [4.85758, 52.34169],
+                      [4.8576, 52.34152],
+                      [4.85757, 52.34123],
+                      [4.85744, 52.34043],
+                      [4.85739, 52.33954],
+                      [4.85747, 52.33925],
+                      [4.8575, 52.33921],
+                      [4.85763, 52.33909],
+                      [4.85785, 52.33907],
+                      [4.85837, 52.3391],
+                      [4.85941, 52.33927],
+                      [4.86042, 52.33934],
+                      [4.86177, 52.33938],
+                      [4.86194, 52.33937],
+                      [4.86205, 52.33935],
+                      [4.8621, 52.33931],
+                      [4.86214, 52.33926],
+                      [4.86215, 52.33919],
+                      [4.86212, 52.33914],
+                      [4.86207, 52.33909],
+                      [4.86197, 52.33904],
+                      [4.86184, 52.33902],
+                      [4.85856, 52.33876],
+                      [4.85148, 52.33837],
+                      [4.84614, 52.33798],
+                      [4.84556, 52.33795],
+                      [4.84477, 52.33794],
+                      [4.84431, 52.33796],
+                      [4.84385, 52.33802],
+                      [4.84343, 52.3381],
+                      [4.84295, 52.3382],
+                      [4.84175, 52.33856],
+                      [4.84106, 52.33871],
+                      [4.84056, 52.33878],
+                      [4.83919, 52.33886],
+                      [4.83082, 52.33888],
+                      [4.82856, 52.33886],
+                      [4.82556, 52.33887],
+                      [4.8198, 52.33876],
+                      [4.81942, 52.33883],
+                      [4.81482, 52.33901],
+                      [4.81442, 52.339],
+                      [4.81402, 52.33896],
+                      [4.81316, 52.33875],
+                      [4.81307, 52.33878],
+                      [4.81298, 52.33878],
+                      [4.81286, 52.33874],
+                      [4.8128, 52.33867],
+                      [4.8128, 52.33862],
+                      [4.81285, 52.33856],
+                      [4.81295, 52.3385],
+                      [4.81353, 52.33762],
+                      [4.81355, 52.33747],
+                      [4.81359, 52.33742],
+                      [4.81369, 52.33739],
+                      [4.81368, 52.33709],
+                      [4.81406, 52.33661],
+                      [4.81435, 52.33628],
+                      [4.81468, 52.33599],
+                      [4.8147, 52.33595],
+                      [4.81469, 52.33591],
+                      [4.81464, 52.33585],
+                      [4.81451, 52.33578],
+                      [4.81447, 52.33574],
+                      [4.81418, 52.3356],
+                      [4.81382, 52.33532]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.81431, 52.33566],
+                      [4.81447, 52.33574],
+                      [4.81455, 52.33574],
+                      [4.81521, 52.33603],
+                      [4.81536, 52.33614],
+                      [4.81539, 52.33624],
+                      [4.81532, 52.33635],
+                      [4.81514, 52.33639],
+                      [4.81501, 52.33644],
+                      [4.81479, 52.33658],
+                      [4.81431, 52.33715],
+                      [4.81415, 52.3373],
+                      [4.81394, 52.33743],
+                      [4.81399, 52.3375],
+                      [4.81399, 52.33753],
+                      [4.81396, 52.33758],
+                      [4.81379, 52.33768],
+                      [4.81324, 52.33855],
+                      [4.81324, 52.33866],
+                      [4.81321, 52.33872],
+                      [4.81316, 52.33875]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.8128, 52.33867],
+                      [4.81253, 52.3386],
+                      [4.81211, 52.33853],
+                      [4.81116, 52.33825],
+                      [4.81036, 52.33791],
+                      [4.80817, 52.3366],
+                      [4.80696, 52.33584],
+                      [4.80677, 52.3357],
+                      [4.80601, 52.33524],
+                      [4.80573, 52.33496],
+                      [4.80363, 52.33367],
+                      [4.80047, 52.33177],
+                      [4.79981, 52.33149],
+                      [4.7977, 52.33033],
+                      [4.79644, 52.32971],
+                      [4.79466, 52.32895],
+                      [4.79412, 52.32873],
+                      [4.79324, 52.32855],
+                      [4.79247, 52.32837],
+                      [4.79194, 52.32829],
+                      [4.79159, 52.32829],
+                      [4.79141, 52.3283],
+                      [4.7911, 52.32837],
+                      [4.79093, 52.32842],
+                      [4.79067, 52.32855],
+                      [4.79054, 52.32864],
+                      [4.79037, 52.32882],
+                      [4.79026, 52.32903],
+                      [4.79024, 52.32924],
+                      [4.79031, 52.32945],
+                      [4.79036, 52.32955],
+                      [4.79054, 52.32974],
+                      [4.79078, 52.32989],
+                      [4.79108, 52.33001],
+                      [4.79142, 52.33008],
+                      [4.7916, 52.33009],
+                      [4.79194, 52.33008],
+                      [4.79228, 52.33002],
+                      [4.79274, 52.32986],
+                      [4.79526, 52.32857],
+                      [4.79558, 52.32837],
+                      [4.79597, 52.32808],
+                      [4.79619, 52.32786],
+                      [4.79636, 52.32763],
+                      [4.79649, 52.3274],
+                      [4.79672, 52.32691],
+                      [4.79686, 52.32667],
+                      [4.79703, 52.32643],
+                      [4.79724, 52.3262],
+                      [4.79761, 52.32594],
+                      [4.79813, 52.32567],
+                      [4.79856, 52.32552],
+                      [4.80018, 52.32514],
+                      [4.80081, 52.32493],
+                      [4.8025, 52.32418],
+                      [4.8029, 52.32404],
+                      [4.80384, 52.32347],
+                      [4.80507, 52.32249],
+                      [4.8055, 52.32213],
+                      [4.80625, 52.32145],
+                      [4.80717, 52.32052],
+                      [4.80902, 52.31846],
+                      [4.80956, 52.31752],
+                      [4.80964, 52.31735],
+                      [4.80969, 52.31715],
+                      [4.80971, 52.317],
+                      [4.8097, 52.31684],
+                      [4.80965, 52.31664],
+                      [4.80952, 52.31637],
+                      [4.80937, 52.31618],
+                      [4.80911, 52.31596],
+                      [4.80864, 52.31565],
+                      [4.80778, 52.31609],
+                      [4.8062, 52.3168],
+                      [4.80566, 52.31707],
+                      [4.80559, 52.31709],
+                      [4.79927, 52.3205],
+                      [4.79816, 52.32112],
+                      [4.79809, 52.3212],
+                      [4.79743, 52.32157],
+                      [4.79424, 52.32327],
+                      [4.7944, 52.32339],
+                      [4.79448, 52.32348],
+                      [4.79495, 52.32382],
+                      [4.79514, 52.32384],
+                      [4.7953, 52.32373],
+                      [4.79811, 52.32222],
+                      [4.79832, 52.32218],
+                      [4.7984, 52.32219],
+                      [4.79847, 52.32222],
+                      [4.79878, 52.32242],
+                      [4.7996, 52.323],
+                      [4.80044, 52.32361],
+                      [4.79776, 52.32504],
+                      [4.7977, 52.32505],
+                      [4.79762, 52.32505],
+                      [4.79753, 52.32501],
+                      [4.79615, 52.32406],
+                      [4.79571, 52.32373],
+                      [4.79568, 52.32368],
+                      [4.79569, 52.32362],
+                      [4.79575, 52.32358],
+                      [4.79688, 52.32298],
+                      [4.7971, 52.32314]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.80013, 52.32338],
+                      [4.79968, 52.32306]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.79514, 52.32384],
+                      [4.79508, 52.32389],
+                      [4.79503, 52.32391],
+                      [4.79496, 52.32392],
+                      [4.79489, 52.32391],
+                      [4.79484, 52.32388],
+                      [4.79477, 52.3238],
+                      [4.79411, 52.32334],
+                      [4.79216, 52.32443],
+                      [4.79196, 52.32438],
+                      [4.7918, 52.32429],
+                      [4.79035, 52.32326],
+                      [4.79049, 52.32317],
+                      [4.79099, 52.32291],
+                      [4.79117, 52.32276],
+                      [4.79121, 52.32248],
+                      [4.79179, 52.3225],
+                      [4.79187, 52.32252],
+                      [4.79216, 52.32237]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.79117, 52.32276],
+                      [4.79122, 52.32284],
+                      [4.7912, 52.32289],
+                      [4.79117, 52.32292],
+                      [4.79058, 52.32323],
+                      [4.79044, 52.32332]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.79035, 52.32326],
+                      [4.78982, 52.32288],
+                      [4.7896, 52.32278],
+                      [4.78947, 52.32274],
+                      [4.78925, 52.3227],
+                      [4.78905, 52.32269],
+                      [4.78884, 52.32271],
+                      [4.78862, 52.32275],
+                      [4.78842, 52.32283],
+                      [4.78559, 52.32432],
+                      [4.78532, 52.32443],
+                      [4.78496, 52.32453],
+                      [4.78455, 52.32463],
+                      [4.78374, 52.32475],
+                      [4.78332, 52.32477],
+                      [4.77804, 52.32476],
+                      [4.77749, 52.32473],
+                      [4.77698, 52.32468],
+                      [4.76996, 52.32374],
+                      [4.76816, 52.32348],
+                      [4.76647, 52.32317],
+                      [4.76561, 52.32298],
+                      [4.7646, 52.32272],
+                      [4.76359, 52.32243],
+                      [4.76302, 52.32224],
+                      [4.76243, 52.32204],
+                      [4.76111, 52.32152],
+                      [4.76054, 52.32128],
+                      [4.75956, 52.3208],
+                      [4.7584, 52.32018],
+                      [4.75805, 52.32002],
+                      [4.7571, 52.31953],
+                      [4.75672, 52.31929],
+                      [4.75631, 52.319],
+                      [4.75516, 52.31807],
+                      [4.75432, 52.31728],
+                      [4.75357, 52.31646],
+                      [4.75291, 52.31561],
+                      [4.75216, 52.31447],
+                      [4.75153, 52.31346],
+                      [4.75137, 52.31316],
+                      [4.75123, 52.31279],
+                      [4.75117, 52.31258],
+                      [4.75109, 52.31209],
+                      [4.75099, 52.3118],
+                      [4.7502, 52.31044],
+                      [4.75015, 52.31026],
+                      [4.75015, 52.31002],
+                      [4.75026, 52.30973],
+                      [4.7503, 52.30966],
+                      [4.7505, 52.30942],
+                      [4.75065, 52.30928],
+                      [4.75077, 52.30911],
+                      [4.75087, 52.30891],
+                      [4.75091, 52.30875],
+                      [4.75086, 52.30861],
+                      [4.75104, 52.3085],
+                      [4.75224, 52.30821],
+                      [4.75261, 52.30816],
+                      [4.75284, 52.30816],
+                      [4.75301, 52.30816],
+                      [4.75341, 52.30821],
+                      [4.7548, 52.30853],
+                      [4.75491, 52.30855],
+                      [4.75503, 52.30852],
+                      [4.75505, 52.3085],
+                      [4.75505, 52.30846],
+                      [4.75497, 52.30837],
+                      [4.75462, 52.3082],
+                      [4.75449, 52.3081],
+                      [4.75444, 52.30804],
+                      [4.75414, 52.30757],
+                      [4.75405, 52.30739],
+                      [4.75396, 52.3071],
+                      [4.75399, 52.30701],
+                      [4.75409, 52.30684],
+                      [4.75419, 52.30673],
+                      [4.7545, 52.30658],
+                      [4.75469, 52.30651],
+                      [4.7561, 52.30619],
+                      [4.75646, 52.30613],
+                      [4.75677, 52.30614],
+                      [4.75688, 52.30613],
+                      [4.75703, 52.30606],
+                      [4.75713, 52.306],
+                      [4.75716, 52.30592],
+                      [4.75721, 52.30587],
+                      [4.76162, 52.30755],
+                      [4.76167, 52.30758],
+                      [4.76173, 52.3077],
+                      [4.7624, 52.30795],
+                      [4.7625, 52.30803],
+                      [4.76252, 52.3081],
+                      [4.76247, 52.30816],
+                      [4.76237, 52.3082],
+                      [4.76205, 52.30855],
+                      [4.76117, 52.30939]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAAN",
+                    "stop_name": "Amsterdam Anderlechtlaan",
+                    "zone_id": "NLAMSAAN",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.81442, 52.33574]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAAS",
+                    "stop_name": "Amsterdam Amstelveensweg",
+                    "zone_id": "NLAMSAAS",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.85868, 52.33914]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAEM",
+                    "stop_name": "Amsterdam Emmastraat",
+                    "zone_id": "NLAMSAEM",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.87048, 52.3533]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAHR",
+                    "stop_name": "Amsterdam Haarlemmermeerstation",
+                    "zone_id": "NLAMSAHR",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.85707, 52.34906]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAOS",
+                    "stop_name": "Amsterdam Olympisch Stadion",
+                    "zone_id": "NLAMSAOS",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.85694, 52.34405]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSASC",
+                    "stop_name": "Amsterdam Schiphol Cateringweg",
+                    "zone_id": "NLAMSASC",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.79982, 52.32319]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSASF",
+                    "stop_name": "Amsterdam Schiphol Airport",
+                    "zone_id": "NLAMSASF",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.76101, 52.30933]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSASK",
+                    "stop_name": "Amsterdam Schiphol Knooppunt Noord",
+                    "zone_id": "NLAMSASK",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.79267, 52.32223]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for 14:00 Jul 22 - Jul 22 Sat. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">14:00 Jul 22 - Jul 22 | Sat</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_AAER-14:00-NLAMSAEM-9373c961">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col">Run #1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_NLAMSAEM" data-stop-id="NLAMSAEM">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Emmastraat</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:00pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAHR" data-stop-id="NLAMSAHR">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Haarlemmermeerstation</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:03pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAOS" data-stop-id="NLAMSAOS">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Olympisch Stadion</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:05pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAAS" data-stop-id="NLAMSAAS">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Amstelveensweg</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:07pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAAN" data-stop-id="NLAMSAAN">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Anderlechtlaan</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:14pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSASC" data-stop-id="NLAMSASC">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Schiphol Cateringweg</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:17pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSASK" data-stop-id="NLAMSASK">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Schiphol Knooppunt Noord</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">2:18pm</span><a class="symbol" href="#note-29-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSASF" data-stop-id="NLAMSASF">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Schiphol Airport</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-pickup"><span class="stop-time-text">2:26pm</span><a class="symbol" href="#note-29-no-pickup">**</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-29-no-pickup">** = No pickup available</div>
+            <div class="note" id="note-29-no-dropoff">‡ = No drop off available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

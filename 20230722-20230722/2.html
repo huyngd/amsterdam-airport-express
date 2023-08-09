@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaHV5bmdkIiwiYSI6ImNsa2ZvaTdjbzFlc3Azbm84Z2YxbTlyZzQifQ.1IEQmug4rHTmLngKdNpW0A';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body><!-- Timetable generated on Wed Aug 09 2023 12:57:12 GMT+0700 (Indochina Time) using GTFS-to-HTML version 2.5.5 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center">
+        <div class="route-color-swatch-large mr-2 flex-none" style="background-color: #2C4365; color: #FFFFFF">Amsterdam Airport Express</div>
+        <div>Amsterdam Schiphol Airport</div>
+      </h1>
+      <div class="effective-date text-gray-600 mb-2">Effective July 22, 2023</div>
+      <div class="timetable mb-10" id="timetable_id_27" data-day-list="Sat" data-direction-name="Amsterdam Schiphol Airport" data-timetable-id="27" data-route-id="2">
+        <h2 class="text-xl">23:52 Jul 22 - Jul 22 | saturday</h2>
+        <div class="map" id="map_timetable_id_27"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_27",
+              "routes": {
+                "0": {
+                  "route_id": "0",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "1": {
+                  "route_id": "1",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "2": {
+                  "route_id": "2",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "3": {
+                  "route_id": "3",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                },
+                "4": {
+                  "route_id": "4",
+                  "agency_id": "AAER",
+                  "route_short_name": "Amsterdam Airport Express",
+                  "route_long_name": "Amsterdam Airport Express: Amsterdam - Amsterdam Schiphol Airport",
+                  "route_type": 3,
+                  "route_color": "#2C4365",
+                  "route_text_color": "#FFFFFF"
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {
+                    "route_color": "#2C4365"
+                  },
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [4.87708, 52.36974],
+                      [4.87713, 52.36971],
+                      [4.87726, 52.3697],
+                      [4.87787, 52.36884],
+                      [4.87779, 52.36877],
+                      [4.87769, 52.36873],
+                      [4.87631, 52.36837],
+                      [4.87639, 52.36832],
+                      [4.87649, 52.36824],
+                      [4.87673, 52.36794],
+                      [4.87681, 52.36778],
+                      [4.87686, 52.36766],
+                      [4.87688, 52.3672],
+                      [4.87704, 52.36682],
+                      [4.87713, 52.36667],
+                      [4.87726, 52.36652],
+                      [4.87751, 52.36631],
+                      [4.87822, 52.36587],
+                      [4.87845, 52.36565],
+                      [4.87857, 52.36548],
+                      [4.87867, 52.36523],
+                      [4.8787, 52.36505],
+                      [4.87865, 52.36485],
+                      [4.87852, 52.3645],
+                      [4.87852, 52.36434],
+                      [4.87855, 52.36422],
+                      [4.87872, 52.36382],
+                      [4.87882, 52.36368],
+                      [4.87889, 52.36362],
+                      [4.87931, 52.36339],
+                      [4.88001, 52.36288],
+                      [4.88035, 52.36267],
+                      [4.88065, 52.36236],
+                      [4.88114, 52.362],
+                      [4.88156, 52.36182],
+                      [4.88191, 52.36171],
+                      [4.88213, 52.36168],
+                      [4.88221, 52.36165],
+                      [4.88226, 52.36161],
+                      [4.88317, 52.36034],
+                      [4.8832, 52.36016],
+                      [4.8835, 52.35972],
+                      [4.88353, 52.35964],
+                      [4.88352, 52.35959],
+                      [4.88346, 52.35953],
+                      [4.88335, 52.35949],
+                      [4.87867, 52.35824],
+                      [4.87862, 52.35823],
+                      [4.87848, 52.35813],
+                      [4.87875, 52.35781],
+                      [4.87987, 52.35617],
+                      [4.87945, 52.35606],
+                      [4.87909, 52.35593],
+                      [4.87861, 52.35564],
+                      [4.87837, 52.35547],
+                      [4.87827, 52.35535],
+                      [4.87096, 52.3534],
+                      [4.87067, 52.35337],
+                      [4.87015, 52.35323],
+                      [4.86997, 52.35316],
+                      [4.86971, 52.35301],
+                      [4.86962, 52.35298],
+                      [4.86633, 52.35219],
+                      [4.86544, 52.35196],
+                      [4.86514, 52.35194],
+                      [4.86485, 52.35186],
+                      [4.86421, 52.35276],
+                      [4.86405, 52.35288],
+                      [4.8638, 52.35294],
+                      [4.86361, 52.35326],
+                      [4.86335, 52.3532],
+                      [4.86284, 52.3532],
+                      [4.86205, 52.35293],
+                      [4.86174, 52.35284],
+                      [4.86078, 52.35262],
+                      [4.85985, 52.35233],
+                      [4.85865, 52.35205],
+                      [4.85768, 52.3518],
+                      [4.85732, 52.35175],
+                      [4.85675, 52.3516],
+                      [4.85666, 52.35158],
+                      [4.85651, 52.35149],
+                      [4.85431, 52.35087],
+                      [4.85413, 52.35084],
+                      [4.85377, 52.35081],
+                      [4.85351, 52.3508],
+                      [4.85268, 52.35091],
+                      [4.85258, 52.35097],
+                      [4.8519, 52.35105],
+                      [4.85167, 52.35107],
+                      [4.85072, 52.35105],
+                      [4.85058, 52.35106],
+                      [4.85046, 52.3511],
+                      [4.85041, 52.35113],
+                      [4.85033, 52.35128],
+                      [4.85031, 52.35143],
+                      [4.85023, 52.35151],
+                      [4.8501, 52.35155],
+                      [4.85004, 52.3516],
+                      [4.84968, 52.3516],
+                      [4.84961, 52.35158],
+                      [4.84952, 52.35152],
+                      [4.84948, 52.35147],
+                      [4.84947, 52.35117],
+                      [4.84948, 52.35108],
+                      [4.84945, 52.35093],
+                      [4.84947, 52.35005],
+                      [4.8494, 52.3498],
+                      [4.849, 52.34936],
+                      [4.84696, 52.34731],
+                      [4.84684, 52.34723],
+                      [4.84657, 52.34697],
+                      [4.84645, 52.34688],
+                      [4.84632, 52.34687],
+                      [4.84623, 52.34682],
+                      [4.84621, 52.34677],
+                      [4.84622, 52.34673],
+                      [4.84624, 52.3467],
+                      [4.8462, 52.34662],
+                      [4.84612, 52.34655],
+                      [4.84586, 52.34638],
+                      [4.84551, 52.34619],
+                      [4.84509, 52.34602],
+                      [4.84482, 52.34595],
+                      [4.84431, 52.34587],
+                      [4.84382, 52.34585],
+                      [4.84316, 52.34586],
+                      [4.84127, 52.34594],
+                      [4.84046, 52.34595],
+                      [4.84045, 52.34572],
+                      [4.84052, 52.34485],
+                      [4.84053, 52.34431],
+                      [4.84056, 52.34367],
+                      [4.84056, 52.34323],
+                      [4.84061, 52.34159],
+                      [4.84058, 52.34099],
+                      [4.84051, 52.34072],
+                      [4.84035, 52.34038],
+                      [4.84019, 52.34018],
+                      [4.83995, 52.33994],
+                      [4.83968, 52.33973],
+                      [4.83931, 52.33953],
+                      [4.83899, 52.3394],
+                      [4.83867, 52.3393],
+                      [4.8382, 52.33921],
+                      [4.83704, 52.33905],
+                      [4.82856, 52.33898],
+                      [4.82656, 52.33895],
+                      [4.82556, 52.33887],
+                      [4.8198, 52.33876],
+                      [4.81692, 52.33868],
+                      [4.81548, 52.33857],
+                      [4.81463, 52.33845],
+                      [4.81381, 52.33832],
+                      [4.81278, 52.33811],
+                      [4.81183, 52.33787],
+                      [4.81066, 52.3375],
+                      [4.80969, 52.33713],
+                      [4.80842, 52.33654],
+                      [4.80725, 52.33589],
+                      [4.80363, 52.33367],
+                      [4.80047, 52.33177],
+                      [4.79981, 52.33149],
+                      [4.7977, 52.33033],
+                      [4.79644, 52.32971],
+                      [4.79466, 52.32895],
+                      [4.79332, 52.32844],
+                      [4.79268, 52.32827],
+                      [4.7924, 52.32821],
+                      [4.7916, 52.32814],
+                      [4.79107, 52.32813],
+                      [4.7897, 52.32818],
+                      [4.78891, 52.32818],
+                      [4.78658, 52.32809],
+                      [4.78574, 52.32805],
+                      [4.78016, 52.32806],
+                      [4.77919, 52.328],
+                      [4.77881, 52.32796],
+                      [4.77845, 52.32791],
+                      [4.77796, 52.32781],
+                      [4.7775, 52.32767],
+                      [4.77674, 52.32731],
+                      [4.77623, 52.32698],
+                      [4.77609, 52.32688],
+                      [4.77586, 52.32667],
+                      [4.7755, 52.32627],
+                      [4.7751, 52.32594],
+                      [4.77479, 52.32571],
+                      [4.77448, 52.32552],
+                      [4.77414, 52.32533],
+                      [4.7737, 52.32514],
+                      [4.77328, 52.32501],
+                      [4.77281, 52.32489],
+                      [4.77232, 52.32479],
+                      [4.76986, 52.32451],
+                      [4.76842, 52.32432],
+                      [4.76737, 52.32415],
+                      [4.76587, 52.32382],
+                      [4.76541, 52.32378],
+                      [4.76459, 52.32359],
+                      [4.76334, 52.32322],
+                      [4.76182, 52.32269],
+                      [4.76087, 52.32234],
+                      [4.76012, 52.32203],
+                      [4.75942, 52.32171],
+                      [4.75844, 52.32122],
+                      [4.75766, 52.32079],
+                      [4.75677, 52.32024],
+                      [4.75573, 52.31951],
+                      [4.75502, 52.31898],
+                      [4.75441, 52.31847],
+                      [4.75332, 52.31736],
+                      [4.75233, 52.31622],
+                      [4.75144, 52.31505],
+                      [4.75066, 52.31384],
+                      [4.74864, 52.31061],
+                      [4.74843, 52.31021],
+                      [4.74808, 52.3093],
+                      [4.74785, 52.30881],
+                      [4.74758, 52.30831],
+                      [4.74714, 52.30778],
+                      [4.74679, 52.30741],
+                      [4.74662, 52.30728],
+                      [4.7464, 52.30717],
+                      [4.74615, 52.3071],
+                      [4.74595, 52.30708],
+                      [4.7456, 52.30709],
+                      [4.74544, 52.30713],
+                      [4.74528, 52.3072],
+                      [4.74512, 52.30728],
+                      [4.74503, 52.30735],
+                      [4.74496, 52.30745],
+                      [4.7449, 52.30758],
+                      [4.74489, 52.30769],
+                      [4.74491, 52.30783],
+                      [4.74497, 52.30798],
+                      [4.74524, 52.30842],
+                      [4.74536, 52.30853],
+                      [4.74548, 52.30856],
+                      [4.74558, 52.30855],
+                      [4.74991, 52.30753],
+                      [4.75026, 52.30743],
+                      [4.75346, 52.30667],
+                      [4.75371, 52.30653],
+                      [4.75443, 52.30631],
+                      [4.75619, 52.30589],
+                      [4.75646, 52.30578],
+                      [4.75675, 52.30556],
+                      [4.75701, 52.30577],
+                      [4.7571, 52.30582],
+                      [4.76162, 52.30755],
+                      [4.76167, 52.30758],
+                      [4.76173, 52.3077],
+                      [4.7624, 52.30795],
+                      [4.7625, 52.30803],
+                      [4.76252, 52.3081],
+                      [4.76247, 52.30816],
+                      [4.76237, 52.3082],
+                      [4.76205, 52.30855],
+                      [4.76117, 52.30939]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAEB",
+                    "stop_name": "Amsterdam Elandsgracht Bus Station",
+                    "zone_id": "NLAMSAEB",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.87683, 52.36966]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAEM",
+                    "stop_name": "Amsterdam Emmastraat",
+                    "zone_id": "NLAMSAEM",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.87048, 52.3533]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSAMU",
+                    "stop_name": "Amsterdam Museumplein",
+                    "zone_id": "NLAMSAMU",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.88116, 52.35899]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSARI",
+                    "stop_name": "Amsterdam Rijksmuseum",
+                    "zone_id": "NLAMSARI",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.88337, 52.35988]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSASF",
+                    "stop_name": "Amsterdam Schiphol Airport",
+                    "zone_id": "NLAMSASF",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3", "4"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.76101, 52.30933]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "NLAMSLEI",
+                    "stop_name": "Amsterdam Leidseplein",
+                    "zone_id": "NLAMSLEI",
+                    "stop_timezone": "Europe/Amsterdam",
+                    "routes": ["0", "1", "2", "3"],
+                    "agency_name": "Amsterdam Airport Express"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.88118, 52.36197]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for 23:52 Jul 22 - Jul 22 Sat. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">23:52 Jul 22 - Jul 22 | Sat</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_AAER-23:52-NLAMSAEB-a381c53f">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col">Run #1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_NLAMSAEB" data-stop-id="NLAMSAEB">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Elandsgracht Bus Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">11:52pm</span><a class="symbol" href="#note-27-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSLEI" data-stop-id="NLAMSLEI">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Leidseplein</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">11:54pm</span><a class="symbol" href="#note-27-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSARI" data-stop-id="NLAMSARI">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Rijksmuseum</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">11:57pm</span><a class="symbol" href="#note-27-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAMU" data-stop-id="NLAMSAMU">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Museumplein</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">11:58pm</span><a class="symbol" href="#note-27-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSAEM" data-stop-id="NLAMSAEM">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Emmastraat</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm no-drop-off"><span class="stop-time-text">11:59pm</span><a class="symbol" href="#note-27-no-dropoff">‡</a></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_NLAMSASF" data-stop-id="NLAMSASF">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Amsterdam Schiphol Airport</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am no-pickup"><span class="stop-time-text">12:23am</span><a class="symbol" href="#note-27-no-pickup">**</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="notes">
+            <div class="note" id="note-27-no-pickup">** = No pickup available</div>
+            <div class="note" id="note-27-no-dropoff">‡ = No drop off available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
